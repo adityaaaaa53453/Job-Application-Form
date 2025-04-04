@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(90deg, rgb(96, 111, 158), wheat);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .nav-menu ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    flex-wrap: wrap;
+  }
+  
+  .nav-menu ul li .link {
+    text-decoration: none;
+    font-weight: 900;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    color: white;
+  }
+  
+  .link.active {
+    border-bottom: 2px solid white;
+  }
+  
+  header {
+    padding: 1rem;
+    font-style: italic;
+    background: linear-gradient(90deg, rgb(96, 111, 158), wheat);
+    text-align: left;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .apply_box {
+    max-width: 800px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    margin: 2rem auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  
+  .apply_box h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .apply_box h2 {
+    color: #333;
+    margin-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .title_small {
+    font-size: 1.25rem;
+  }
+  
+  .form_container {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .form_control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  input,
+  select,
+  textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: royalblue;
+    box-shadow: 0 0 0 2px rgba(65, 105, 225, 0.2);
+  }
+  
+  .button_container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+  }
+  
+  button {
+    background-color: royalblue;
+    border: transparent solid 2px;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: red;
+    border: 2px solid royalblue;
+    transition: 0.3s ease-out;
+  }
+  
+  .textarea_control {
+    grid-column: 1 / span 2;
+  }
+  
+  .textarea_control textarea {
+    width: 100%;
+    resize: vertical;
+  }
+  
+  .qualification_details,
+  .work_experience_details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(90deg, rgb(96, 111, 158), wheat);
+    color: white;
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-menu ul li {
+      margin: 0.5rem 0;
+    }
+  
+    .form_container {
+      grid-template-columns: 1fr;
+    }
+  
+    .qualification_details,
+    .work_experience_details {
+      grid-template-columns: 1fr;
+    }
+  
+    .textarea_control {
+      grid-column: 1 / span 1;
+    }
+  
+    .apply_box {
+      padding: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 460px) {
+    .apply_box {
+      padding: 1rem;
+      border-radius: 15px;
+    }
+  
+    .title_small {
+      font-size: 1.1rem;
+    }
+  
+    button {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  
+    .nav-menu ul {
+      padding: 0;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+  
